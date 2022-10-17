@@ -255,27 +255,27 @@
 		for (var i = 0; i < tesbackup.length; i++) {
 			var total = Math.floor((tesbackup[i][0] + tesbackup[i][1] + tesbackup[i][2]) / 3)
 			if (total < 64) {
-				tes[i][0] = 255
-				tes[i][1] = 0
-				tes[i][2] = 0
-				tes[i][3] = tesbackup[i][3]
+				tesbackup[i][0] = 255
+				tesbackup[i][1] = 0
+				tesbackup[i][2] = 0
+				tesbackup[i][3] = tesbackup[i][3]
 			}
 			else if (total < 127) {
-				tes[i][0] = 0
-				tes[i][1] = 255
-				tes[i][2] = 0
-				tes[i][3] = tesbackup[i][3]
+				tesbackup[i][0] = 0
+				tesbackup[i][1] = 255
+				tesbackup[i][2] = 0
+				tesbackup[i][3] = tesbackup[i][3]
 			}
 			else if (total > 127) {
-				tes[i][0] = 0
-				tes[i][1] = 0
-				tes[i][2] = 255
-				tes[i][3] = tesbackup[i][3]
+				tesbackup[i][0] = 0
+				tesbackup[i][1] = 0
+				tesbackup[i][2] = 255
+				tesbackup[i][3] = tesbackup[i][3]
 			}
 		}
-		obj.array2canvas(tes)
+		obj.array2canvas(tesbackup)
 	})
-	
+    
 	//treshold
 	document.getElementById('threshold').addEventListener('input', function () {
 		document.getElementById('threshold_val').value = this.value
